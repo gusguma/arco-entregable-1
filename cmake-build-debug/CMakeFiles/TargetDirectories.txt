@@ -1,0 +1,3 @@
+C:/develop/clion/entregable-1/cmake-build-debug/CMakeFiles/entregable_1.dir
+C:/develop/clion/entregable-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/develop/clion/entregable-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
