@@ -175,10 +175,11 @@ __global__ void transfer(const int *dev_vector, int *dev_result) {
     unsigned int myID = threadY + threadX * blockDim.x;
     /// calculamos la fila donde se encuentra la posicion
     int row = (int) myID / COLUMNS;
-    /// calculamos si la posicion
     if (row < (ROWS - 1)) {
+        /// si no esta en la ultima fila, asignamos la posición y le sumamos el numero de columnas
         dev_result[myID + COLUMNS] = dev_vector[myID];
     } else {
+        /// si myId esta en la última fila, le restamos a myId el producto de las columnas * (filas - 1)
         dev_result[myID - (COLUMNS * (ROWS - 1))] = dev_vector[myID];
     }
 }
